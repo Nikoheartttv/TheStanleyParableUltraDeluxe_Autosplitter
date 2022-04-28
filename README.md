@@ -9,6 +9,7 @@ Incomplete Autosplitter - More research of game assembly code neeeded but some v
 
 Requires manual start and manual splits  
 Looks at LoadingScene_UD_MASTER within Unity's Scene Manager and triggers isLoading to pause IGT
+IGT won't pause when came is closed for possible game resets for specific endings/interaction
 
 ## Incomplete Autosplitter
 
