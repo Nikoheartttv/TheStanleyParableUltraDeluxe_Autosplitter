@@ -2,8 +2,8 @@
 
 ## Repo Contains
 
-Working Load Removal ASL - Requires UnityASL.bin to work (within /Components of LiveSplit folder)
-Incomplete Autosplitter - More research of game assembly code neeeded but some variables of interest noted
+Working Load Removal ASL - Requires UnityASL.bin to work (within /Components of LiveSplit folder)  
+Incomplete Autosplitter - More research of game assembly code neeeded but some variables of interest noted  
 
 ## Current Working Features
 
