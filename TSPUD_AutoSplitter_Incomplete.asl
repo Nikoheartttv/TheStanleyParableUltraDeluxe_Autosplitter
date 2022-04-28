@@ -40,8 +40,10 @@ init
 		// var FOC = helper.GetClass("Assembly-CSharp", "FigleyOverlayController"); // keeping track of figleys (if part of run)
 		// var SE = helper.GetClass("Assembly-CSharp", "SimpleEvent"); // see this crop up a lot, making note of it
 		
-		//vars.Unity.Make<bool>(GM.Static, ST["_instance"], GM["ONMAINMENUORSETTINGS"]).Name = "OnMainMenu"; // to be used for start/onStart possibly to help run start - dependant on run if they do quit to menu's, etc
-		// vars.Unity.Make<int>(GM.Static, ST["_instance"], GM["PAUSEMENUACTIVE"]).Name = "PauseMenu"; // not detecting change but static value does change in .NET info under same guidance
+		// vars.Unity.Make<bool>(GM.Static, ST["_instance"], GM["ONMAINMENUORSETTINGS"]).Name = "OnMainMenu";
+		// ^ to be used for start/onStart possibly to help run start - dependant on run if they do quit to menu's, etc - value changes recognised in Cheat Engine (.NET info), code not yet
+		// vars.Unity.Make<int>(GM.Static, ST["_instance"], GM["PAUSEMENUACTIVE"]).Name = "PauseMenu";
+		// ^ possible use for recognising in-game pausing - value changes recognised in Cheat Engine (.NET info), code not yet
 		
 		//return true;
 	//});
