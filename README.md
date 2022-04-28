@@ -4,6 +4,7 @@
 
 Load Removal - Requires UnityASL.bin to work (within /Components of LiveSplit folder)  
 Autosplitter - More research of game assembly code neeeded but some variables of interest noted  
+Requires Just-Ero's UnityASL component: https://github.com/just-ero/asl-help/raw/main/libraries/UnityASL.bin
 
 ## Load Removal ASL
 
