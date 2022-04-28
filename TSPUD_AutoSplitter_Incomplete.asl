@@ -9,9 +9,9 @@ startup
     if (timer.CurrentTimingMethod == TimingMethod.RealTime)
     {
         var messageBox = MessageBox.Show(
-			"The game is run in IGT (Time without Loads - Game Time).\n"+
-			"LiveSplit is currently set to show Real Time (RTA).\n"+
-			"Would you like to set the timing method to Game Time?",
+			"The game is run in RTA w/o Loads as the main timing method.\n"
+			+ "LiveSplit is currently set to show Real Time (RTA).\n"+
+			+ "Would you like to set the timing method to RTA w/o Loads?",
 			"LiveSplit | The Stanley Parable Ultra Deluxe", 
 			MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         if (messageBox == DialogResult.Yes)
