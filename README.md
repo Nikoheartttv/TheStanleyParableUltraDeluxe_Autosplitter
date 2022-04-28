@@ -1,5 +1,10 @@
 # Auto-Splitter for The Stanley Parable: Ultra Deluxe
 
+## Repo Contains
+
+Working Load Removal ASL - Requires UnityASL.bin to work (within /Components of LiveSplit folder)
+Incomplete Autosplitter - More research of game assembly code neeeded but some variables of interest noted
+
 ## Current Working Features
 
 Load Removal - Requires manual start and manual splits
