@@ -12,7 +12,7 @@ startup
 			"The game is run in IGT (Time without Loads - Game Time).\n"+
 			"LiveSplit is currently set to show Real Time (RTA).\n"+
 			"Would you like to set the timing method to Game Time?",
-			"LiveSplit | Dexter Stardust: Adventures in Outer Space", 
+			"LiveSplit | The Stanley Parable Ultra Deluxe", 
 			MessageBoxButtons.YesNo, MessageBoxIcon.Question);
         if (messageBox == DialogResult.Yes)
 			timer.CurrentTimingMethod = TimingMethod.GameTime;
