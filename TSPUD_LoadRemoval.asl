@@ -2,21 +2,27 @@ state("The Stanley Parable Ultra Deluxe"){}
 
 startup
 {
-    vars.Log = (Action<object>)(value => print(String.Concat("[The Stanley Parable Ultra Deluxe] ", value)));
-    vars.Unity = Assembly.Load(File.ReadAllBytes(@"Components\UnityASL.bin")).CreateInstance("UnityASL.Unity");
-    vars.Unity.LoadSceneManager = true;
+	vars.Log = (Action<object>)(value => print(String.Concat("[The Stanley Parable Ultra Deluxe] ", value)));
+	vars.Unity = Assembly.Load(File.ReadAllBytes(@"Components\UnityASL.bin")).CreateInstance("UnityASL.Unity");
+	    vars.Unity.LoadSceneManager = true;
 	
-    if (timer.CurrentTimingMethod == TimingMethod.RealTime)
-    {
-        var timingMessage = MessageBox.Show(
+	vars.LoadingScenes = new List<string>()
+	{
+		"LoadingScene_UD_MASTER",
+		"Menu_UD_MASTER",
+	};
+	
+	if (timer.CurrentTimingMethod == TimingMethod.RealTime)
+	{
+		var timingMessage = MessageBox.Show(
 			"The game is run in RTA w/o Loads as the main timing method.\n"
 			+ "LiveSplit is currently set to show Real Time (RTA).\n"
 			+ "Would you like to set the timing method to RTA w/o Loads?",
-			"LiveSplit | The Stanley Parable Ultra Deluxe",  
+			"LiveSplit | The Stanley Parable Ultra Deluxe", 
 			MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-        if (timingMessage == DialogResult.Yes)
+		if (timingMessage == DialogResult.Yes)
 			timer.CurrentTimingMethod = TimingMethod.GameTime;
-    }
+	}
 }
 
 init
