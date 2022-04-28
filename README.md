@@ -2,21 +2,19 @@
 
 ## Repo Contains
 
-Working Load Removal ASL - Requires UnityASL.bin to work (within /Components of LiveSplit folder)  
-Incomplete Autosplitter - More research of game assembly code neeeded but some variables of interest noted  
+Load Removal - Requires UnityASL.bin to work (within /Components of LiveSplit folder)  
+Autosplitter - More research of game assembly code neeeded but some variables of interest noted  
 
 ## Load Removal ASL
 
 Requires manual start and manual splits  
-Looks at LoadingScene_UD_MASTER within Unity's Scene Manager and triggers isLoading to pause IGT
-IGT won't pause when came is closed for possible game resets for specific endings/interaction
+IGT also pauses when you pause in-game and game closes
 
-## Incomplete Autosplitter
+## Autosplitter
 
-Timer can start from main menu - needs revision - remove // if wanted  
-Timer can reset when reaching main menu - needs revision depending on run -- remove // if wanted 
-Var classes to use/of interest designated, to look into further
-Make settings of all endings so user can choose which endings they want as to pair against their splits of choice
+Timer starts from main menu to starting game
+Splits when returning back to starting point (with exception)
+IGT pauses when you pause in-game and game closes
 
 ## Resources
 
