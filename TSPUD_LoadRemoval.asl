@@ -21,30 +21,40 @@ startup
 
 init
 {
-	vars.Unity.Load(game);
+	vars.Unity.TryOnLoad = (Func<dynamic, bool>)(helper =>
+	{
+		var GM = helper.GetClass("Assembly-CSharp", "GameMaster");
+		vars.Unity.Make<bool>(GM.Static, GM["PAUSEMENUACTIVE"]).Name = "PauseMenu";
+		
+		return true;
+	});
+	
+	vars.Unity.Load(game);		
 }
 
 update
 {
-    if (!vars.Unity.Loaded) return false;
+	if (!vars.Unity.Loaded) return false;
 	
-    vars.Unity.Update();
+	vars.Unity.Update();
 	
 	current.Scene = vars.Unity.Scenes.Active.Name;
 	   
 	// Logging Scene Changes
-    if (old.Scene != current.Scene) vars.Log(String.Concat("Scene Change: ", vars.Unity.Scenes.Active.Index.ToString(), ": ", current.Scene));
+	if (old.Scene != current.Scene) vars.Log(String.Concat("Scene Change: ", vars.Unity.Scenes.Active.Index.ToString(), ": ", current.Scene));
 }
 
 isLoading
 {
-	// idea = as quitting out may be a situation, ability to pause IGT when game/state is inactive?
-	return (current.Scene == "LoadingScene_UD_MASTER");
-	// Will pausing to menu be utilised as load removal or not worth it?
-	// return (vars.Unity["PauseMenu"].Current);
+	if (!(vars.Unity["PauseMenu"].Current || vars.LoadingScenes.Contains(current.Scene))) 
+	{
+		return false;
+	}
+	return true;
 }
 
 exit
 {
-    vars.Unity.Reset();
+	timer.IsGameTimePaused = true;
+	vars.Unity.Reset();
 }
