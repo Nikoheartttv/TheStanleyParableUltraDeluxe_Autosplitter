@@ -76,7 +76,8 @@ start
 split
 {
 	return ((current.Scene == "map1_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER") 
-			|| (current.Scene == "MemoryzonePartTwo_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER"));
+			|| (current.Scene == "MemoryzonePartTwo_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER"))
+			|| (current.Scene == "MemoryzonePartThree_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER"));
 }
 
 onSplit
