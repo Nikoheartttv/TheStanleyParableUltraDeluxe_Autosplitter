@@ -70,7 +70,7 @@ update
 
 start
 {
-	return (current.Scene == "map1_UD_MASTER" && (vars.Unity["MouseMoved"].Changed));
+	return (current.Scene == "map1_UD_MASTER" && ((vars.Unity["MouseMoved"].Changed) || (vars.Unity["Movement"].Changed)));
 }
 
 split
