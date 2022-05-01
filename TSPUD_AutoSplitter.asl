@@ -70,17 +70,13 @@ update
 
 start
 {
-	//needs revision - start on first mouse movement
-	//return (vars.Unity["MouseMovement"].Current != vars.Unity["MouseMovement"].Old); // probably incorrect
+	return (current.Scene == "map1_UD_MASTER" && (vars.Unity["MouseMoved"].Changed));
 }
 
 split
 {
-	//needs revision
-	if ((current.Scene == "map1_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER") || (current.Scene == "MemoryzonePartTwo_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER"))
-	{
-		return true;
-	}
+	return ((current.Scene == "map1_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER") 
+			|| (current.Scene == "MemoryzonePartTwo_UD_MASTER" && old.Scene == "LoadingScene_UD_MASTER"));
 }
 
 onSplit
