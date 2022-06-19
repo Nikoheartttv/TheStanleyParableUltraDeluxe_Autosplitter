@@ -2,22 +2,24 @@
 
 ## Repo Contains
 
-Autosplitter with Load Removal & IL Run Timer (Must start from Chapter if using IL Timer)
-- Requires Just-Ero's ASLHelper component: [https://github.com/just-ero/asl-help/raw/main/libraries/UnityASL.bin](https://github.com/just-ero/asl-help/blob/main/Components/LiveSplit.ASLHelper.bin)
+Load Removal - Requires UnityASL.bin to work (within /Components of LiveSplit folder)  
+Autosplitter - More research of game assembly code neeeded but some variables of interest noted  
+Requires Just-Ero's UnityASL component: https://github.com/just-ero/asl-help/raw/main/libraries/UnityASL.bin
+
+## Load Removal ASL
+
+Requires manual start and manual splits  
+IGT also pauses when you pause in-game and game closes
 
 ## Autosplitter
 
-RTA starts after Intro Cutscene (when you press ESC), IGT starts once game loads in
-Will remove loads (pause IGT) of loading screens only.
-Splits at all major scene changes:
-  - most of Telsa Tower splits in Settings have been set to false aside from loading into Chapter and Slappy final fight
-  - if wanting all scene settings turned on, add splits accordingly
-IL Run Timer (Must start from Chapter if using IL Timer)
-
+Timer starts from main menu to starting game
+Splits when returning back to starting point (with exception)
+IGT pauses when you pause in-game and game closes
 
 ## Resources
 
-Leaderboards: [speedrun.com/goosebumps_dead_of_night](https://www.speedrun.com/goosebumps_dead_of_night)
-Discord: [discord.gg/usymcQBu6m](https://discord.gg/usymcQBu6m)
-Website: [goosebumpsgame.com/](https://www.goosebumpsgame.com/)  
-Game: [s.team/a/1173150](https://s.team/a/1173150/) ($29.99)  
+Leaderboards: [speedrun.com/tspud](https://www.speedrun.com/tspud)  
+Discord: [discord.gg/F7hBBye](https://discord.gg/F7hBBye)  
+Website: [stanleyparable2.com](https://stanleyparable2.com/)  
+Game: [s.team/a/1703340](https://s.team/a/1703340/) ($24.99)  
